@@ -153,6 +153,7 @@ while(True):
         cv2.circle(frame,maxL,int(3*maxV),[0,0,255],1)
         cv2.normalize(dist, dist, 0, 1.0, cv2.NORM_MINMAX)
         cv2.imshow('Distance Transform Image', dist)
+        cv2.imshow('together',np.hstack((frame,board)))
         
     cv2.imshow('frame',frame)
     cv2.imshow('blure',blure)
